@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Smart Car Pool</string>
+    <string name="title_activity_home">Home Page</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Update Details</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_startup">StartupActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_register">Register Details</string>
+    <string name="font_family">sans-serif-condensed</string>
+    <string name="font_family_regular">sans-serif</string>
+    <string name="font_family_light">sans-serif-light</string>
+
+    <!-- String constants for login and registeration activity -->
+    <string name="email">Email</string>
+    <string name="user_name">Name</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="current_location">Current Location</string>
+    <string name="vechile_registeration_number">Vechile Registeration Number(Optional)</string>
+    <string name="register_me">Register me</string>
+    <string name="login">Log in</string>
+    <string name="register">Register</string>
+    <string name="register_message">If you have not registered yet, click on below Register me button</string>
+
+    <!-- String constants for update user details fragment -->
+    <string name="update_me">Update Details</string>
+
+    <!-- Prefernce related properties -->
+    <string name="pref_send_report">Send crash reports</string>
+    <string name="pref_send_report_summary">Helps to fix bugs</string>
+    <string name="pref_sync_frequency">Sync frequency</string>
+    <string name="pref_sync_frequency_summary">Set the sync frequency</string>
+    <string name="pref_user_name">Set username</string>
+    <string name="pref_user_name_summary">Set your username</string>
+    <string name="pref_user_pass">Set password</string>
+    <string name="pref_user_pass_summary">Set your password</string>
+    <string name="pref_user_autologin">Auto Login</string>
+    <string name="pref_user_autologin_summary">Automatically login</string>
+    <string name="pref_user_profile">User Profile</string>
+    <string name="pref_update_setting">Update Settings</string>
+    <string name="undobar_sample_message">Undo Bar message</string>
+    <string name="pref_user_location">Current location</string>
+    <string name="pref_user_location_summary">Set your Current location</string>
+
+    <string-array name="syncFrequency">
+        <item name="1">Once a day</item>
+        <item name="7">Once a week</item>
+        <item name="3">Once a year</item>
+        <item name="0">Never (Update manually)</item>
+    </string-array>
+    <string-array name="syncFrequencyValues">
+        <item name="1">1</item>
+        <item name="7">7</item>
+        <item name="30">30</item>
+        <item name="0">0</item>
+    </string-array>
+    <string-array name="locations">
+        <item>Indore,India</item>
+        <item>Hyderabad,India</item>
+        <item>Chennai,India</item>
+        <item>Bangalore,India</item>
+        <item>Delhi,India</item>
+    </string-array>
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>Trips</item>
+        <item>Trust circles</item>
+        <item>Update details</item>
+        <!-- TODO add settings and feedback -->
+    </string-array>
+    <string-array name="nav_drawer_inner_items">
+        <item>Home Page</item>
+        <item>Plan and Search Trips</item>
+        <item>Trust circles </item>
+        <item>Update Personal details</item>
+    </string-array>
+
+    <!--
+         the icons are in sync with navigational draw items
+                http://www.icons4android.com
+    -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home_black</item>
+        <item>@drawable/ic_planner_black</item>
+        <item>@drawable/ic_collaboration_black</item>
+        <item>@drawable/ic_edit_user_black</item>
+    </array>
+
+    <!-- trust circles related properties -->
+
+    <string-array name="circle_activity_navigation_options">
+        <item>Search circles</item>
+        <item>Current circles</item>
+        <item>Create new circle</item>
+        <item>Update access request</item>
+    </string-array>
+
+    <!-- create trust circle properties -->
+    <string name="circle_name">Circle Name</string>
+    <string name="circle_location">Location</string>
+    <string name="circle_open">Is Circle exclusive</string>
+    <string name="circle_desc">Info about the circle</string>
+    <string name="circle_create">Create circle</string>
+    <string name="active_trust_circles">Active Trust Circles</string>
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- changes for expandable card end -->
+    <string name="carddemo_title_list_color">Colored cards</string>
+
+    <string-array name="account_info_card_expand_subtitle1">
+        <item>since your last bill run</item>
+        <item>is</item>
+        <item>will arrive on</item>
+        <item>used 774 MB</item>
+        <item>used 200 texts</item>
+    </string-array>
+    <string-array name="account_info_card_expand_subtitle2">
+        <item>€ 1.46</item>
+        <item>€ 32.20</item>
+        <item>27th Oct 14</item>
+        <item>200 MB left</item>
+        <item>700 texts left</item>
+    </string-array>
+
+    <string name="title_activity_circle">CircleActivity</string>
+
+    <!-- properties related to the trust circle card menu -->
+    <string name="action_circle_unsubscribe">Unsubscribe</string>
+    <string name="action_circle_subscribe">Subscribe</string>
+
+    <!-- properties relevant to search cirlces -->
+    <string name="search_circles">Search Circles</string>
+
+    <string-array name="spinner_search_circle_open_items">
+        <item>All</item>
+        <item>Open</item>
+        <item>Restricted</item>
+    </string-array>
+
+    <string name="action_search">Search</string>
+    <string name="search_circle_results">Search results</string>
+    <string name="action_show_search_options">Show Search Options</string>
+
+    <!-- Changes for Trip -->
+    <string-array name="home_activity_trip_navigation_options">
+        <item>Search for trips</item>
+        <item>Current trips</item>
+        <item>Plan new trip</item>
+    </string-array>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="title_activity_trip">TripActivity</string>
+
+    <!-- properties for create trip fragment -->
+    <string name="text_vechile_details">Vechile Details</string>
+    <string name="vechile_registeration_number_non_optional">Vechile Registeration Number</string>
+    <string name="vechile_type">Vechile Type</string>
+    <string name="open_seats">Open Seats</string>
+
+    <string-array name="spinner_create_trip_open_seats">
+        <item>Choose open seats</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string name="text_start_location_details">Start Location Details</string>
+
+    <string name="start_location_city">City</string>
+    <string name="start_location_place">Place(Click left icon to capture place on map)</string>
+    <string name="start_location_date">Date</string>
+    <string name="start_location_time">Time</string>
+
+    <string name="action_start_location_choose_date_time">Choose timing</string>
+
+    <string name="text_end_location_details">End Location Details</string>
+
+    <string name="end_location_city">City</string>
+    <string name="end_location_place">Place(Click left icon to capture place on map)</string>
+    <string name="end_location_date">Date</string>
+    <string name="end_location_time">Time</string>
+
+    <string name="action_end_location_choose_date_time">Choose timing</string>
+    <string name="text_security_details">Security Details</string>
+
+    <string name="action_create_trip">Create Trip</string>
+
+    <string-array name="spinner_create_trip_circles">
+        <item>Open to all</item>
+    </string-array>
+
+    <string name="view_trip_in_map">View trip in map</string>
+    <string name="active_trips">Active Trips</string>
+
+    <!-- Suggested communities sample properties not to used in live data -->
+    <string name="demo_suggested_header">Gachibowli,Hyderabad,India to Gandhi Nagar,Bangalore,India</string>
+    <string name="demo_suggested_title">AP-28-MP-323123 Tata Indicom</string>
+    <string name="demo_suggested_member">4 members</string>
+    <string name="demo_suggested_subtitle">21/04/2014 16:00 to 22/04/2014 06:00</string>
+    <string name="demo_suggested_community">View details in map</string>
+
+    <!-- Search Trips related properties -->
+    <string name="search_trips">Search Trips(Fields are optional)</string>
+    <string name="search_trips_results">Search Trip Results</string>
+    <string name="search_trips_start_location_hint">Start Location</string>
+    <string name="search_trips_start_location_date">Start Date</string>
+    <string name="search_trips_start_location_time">Start Time</string>
+    <string name="search_trips_end_location_hint">End Location</string>
+    <string name="search_trips_end_location_date">End Date</string>
+    <string name="search_trips_end_location_time">End Time</string>
+    <string name="no_result_text">No data to display</string>
+
+
+    <array name="nav_drawer_inner_items_icons">
+        <item>@drawable/ic_tris</item>
+        <item>@drawable/ic_ic_launcher_web</item>
+        <item>@drawable/ic_ic_info</item>
+
+    </array>
+
+    <string name="pending_trust_circle_request">Pending Request for Trust Circles access </string>
+    <string name="action_circle_allow">Allow</string>
+    <string name="action_circle_reject">Reject</string>
+
+</resources>

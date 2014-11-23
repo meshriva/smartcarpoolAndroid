@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ibm.techathon.elven.smartpool.fragment.CurrentTripsFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/card_line_background_color"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        >
+
+    <TextView style="@style/ListHeaderLabel"
+        android:text="@string/active_trips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View android:id="@+id/divider"
+        style="@style/ListHeaderDividerLabel" />
+
+    <!-- You can customize this layout.
+     You need to have in your layout a `CardView` with the ID `list_cardId` -->
+    <it.gmariotti.cardslib.library.view.CardListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/card_current_trips_list"
+        card:list_card_layout_resourceID="@layout/list_card_layout"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

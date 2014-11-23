@@ -1,0 +1,10 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:choiceMode="singleChoice"
+    android:divider="@color/common_action_bar_splitter"
+    android:fontFamily="@string/font_family"
+    android:background="@color/list_background"
+    android:listSelector="@drawable/list_selector"
+    tools:context="com.ibm.techathon.elven.smartpool.fragment.NavigationDrawerFragment" />

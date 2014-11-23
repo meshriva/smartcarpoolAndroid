@@ -1,0 +1,131 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ibm.techathon.elven.smartpool.fragment.CreateNewCircleFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:hint="@string/circle_name"
+            android:fontFamily="@string/font_family"
+            android:id="@+id/editText_register_circle_name"
+            android:layout_toEndOf="@+id/imageView_register_circle_name"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView_register_circle_name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="@dimen/list_image_width"
+            android:layout_height="@dimen/list_image_height"
+            android:id="@+id/imageView_register_circle_name"
+            android:src="@drawable/ic_collaboration"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <AutoCompleteTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:hint="@string/circle_location"
+            android:fontFamily="@string/font_family"
+            android:id="@+id/editText_register_circle_location"
+            android:layout_toEndOf="@+id/imageView_register_user_name"
+            android:layout_toRightOf="@+id/imageView_register_user_name"
+            android:layout_below="@+id/editText_register_circle_name"
+            android:layout_alignLeft="@+id/editText_register_circle_name"
+            android:layout_alignStart="@+id/editText_register_circle_name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/registeration_edit_margin_top"/>
+
+        <ImageView
+            android:layout_width="@dimen/list_image_width"
+            android:layout_height="@dimen/list_image_height"
+            android:id="@+id/imageView_register_circle_location"
+            android:src="@drawable/ic_compass_96"
+            android:layout_alignBottom="@+id/editText_register_circle_location"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="@dimen/list_image_width"
+            android:layout_height="@dimen/list_image_height"
+            android:id="@+id/imageView_register_circle_open"
+            android:src="@drawable/ic_private"
+            android:layout_below="@+id/editText_register_circle_location"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/registeration_edit_margin_top"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/circle_open"
+            android:id="@+id/switch_registeration_circle_open"
+            android:fontFamily="@string/font_family"
+            android:layout_toEndOf="@+id/imageView_register_circle_open"
+            android:layout_toRightOf="@+id/imageView_register_circle_open"
+            android:layout_alignBottom="@+id/imageView_register_circle_open"
+            android:layout_alignLeft="@+id/editText_register_circle_location"
+            android:layout_alignStart="@+id/editText_register_circle_location"
+            android:layout_marginLeft="16dp" />
+
+        <EditText android:id="@+id/editText_register_circle_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="3"
+            android:fontFamily="@string/font_family"
+            android:hint="@string/circle_desc"
+            android:gravity="top|left" android:inputType="textMultiLine"
+            android:scrollHorizontally="false" android:minWidth="10.0dip"
+            android:maxWidth="180dip"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/switch_registeration_circle_open"
+            android:layout_alignLeft="@+id/switch_registeration_circle_open"
+            android:layout_alignStart="@+id/switch_registeration_circle_open" />
+
+        <ImageView
+            android:layout_width="@dimen/list_image_width"
+            android:layout_height="@dimen/list_image_height"
+            android:id="@+id/imageView_register_circle_desc"
+            android:src="@drawable/ic_info"
+            android:layout_toStartOf="@+id/switch_registeration_circle_open"
+            android:layout_toLeftOf="@+id/switch_registeration_circle_open"
+            android:layout_above="@+id/button_register_circle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:textAppearanceSmall"
+            android:fontFamily="@string/font_family"
+            android:textSize="@dimen/registeraton_button_text_size"
+            android:text="@string/register_me"
+            android:id="@+id/button_register_circle"
+            android:ems="10"
+            android:layout_toEndOf="@+id/imageView_register_circle_desc"
+            android:layout_toRightOf="@+id/imageView_register_circle_desc"
+            android:layout_below="@+id/editText_register_circle_desc"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="67dp" />
+
+
+    </RelativeLayout>
+</FrameLayout>

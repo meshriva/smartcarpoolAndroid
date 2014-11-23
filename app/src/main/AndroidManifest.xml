@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ibm.techathon.elven.smartpool" >
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Push Permission -->
+    <permission
+        android:name="com.ibm.bluelist.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- General Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Push Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.ibm.bluelist.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!-- Google Maps Android API v2  -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name="com.ibm.techathon.elven.smartpool.application.SmartPoolApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app_car_pool_96"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- Metadata for the google play services -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB6m6pfXE0nw6aJVwRc8jXhnxCg_IJHrfE" />
+
+        <!-- Push Settings Start -->
+        <!-- Add GCM Intent Service and intent-filters for RECEIVE and REGISTRATION of notifications -->
+        <activity android:name="com.ibm.mobile.services.push.IBMUIActivity" />
+
+        <service android:name="com.ibm.mobile.services.push.IBMPushIntentService" />
+
+        <receiver
+            android:name="com.ibm.mobile.services.push.IBMPushBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.ibm.mbaas.push.sdk.client.android.sample" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.ibm.mbaas.push.sdk.client.android.sample" />
+            </intent-filter>
+        </receiver>
+        <!-- Push Settings End -->
+
+
+        <!--
+             Login Activity to be called when login action needs to be done
+              this is the first activity to be launched when application is started
+        -->
+        <activity
+            android:name="com.ibm.techathon.elven.smartpool.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+
+            <!-- making Login activity to be the first activity launched when application starts -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- making Register activity to called when user wants to register -->
+        <activity
+            android:name="com.ibm.techathon.elven.smartpool.activity.RegisterActivity"
+            android:label="@string/register"
+            android:parentActivityName="com.ibm.techathon.elven.smartpool.activity.LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ibm.techathon.elven.smartpool.activity.LoginActivity" />
+        </activity>
+
+        <!-- Home Activity that user will move when the login action is successfully completed -->
+        <activity
+            android:name="com.ibm.techathon.elven.smartpool.activity.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:parentActivityName="com.ibm.techathon.elven.smartpool.activity.LoginActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ibm.techathon.elven.smartpool.activity.LoginActivity" />
+
+            <!-- Push Settings Start -->
+            <!-- Notification Intent -->
+            <intent-filter>
+                <action android:name="com.ibm.bluelist.BlueList.IBMPushNotification" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <!-- Push Settings End -->
+        </activity>
+
+        <!-- user setting activity -->
+        <activity android:name="com.ibm.techathon.elven.smartpool.activity.UserSettingActivity" />
+
+        <!-- trust circle activity -->
+        <activity
+            android:name="com.ibm.techathon.elven.smartpool.activity.CircleActivity"
+            android:label="@string/register"
+            android:parentActivityName="com.ibm.techathon.elven.smartpool.activity.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ibm.techathon.elven.smartpool.activity.LoginActivity" />
+        </activity>
+        <activity
+            android:name="com.ibm.techathon.elven.smartpool.activity.TripActivity"
+            android:label="@string/title_activity_trip"
+            android:parentActivityName="com.ibm.techathon.elven.smartpool.activity.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ibm.techathon.elven.smartpool.activity.HomeActivity" />
+        </activity>
+        <activity android:name=".activity.StoreMapActivity"
+            android:label="Maps"  >
+        </activity>
+        <activity android:name=".activity.LineMapActivity">
+
+        </activity>
+    </application>
+
+</manifest>

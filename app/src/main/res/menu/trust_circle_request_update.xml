@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ibm.techathon.elven.smartpool.activity.CircleActivity">
+
+    <item android:id="@+id/action_circle_allow" android:title="@string/action_circle_allow"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/action_circle_reject" android:title="@string/action_circle_reject"
+        android:orderInCategory="100" app:showAsAction="never" />
+</menu>

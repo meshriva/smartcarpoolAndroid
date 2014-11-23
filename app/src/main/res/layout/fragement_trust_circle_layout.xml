@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="@dimen/image_thumbnail_image_width"
+        android:layout_height="@dimen/image_thumbnail_image_height"
+        android:id="@+id/ListImageView"
+        android:src="@drawable/ic_car_24"
+        android:layout_alignBottom="@+id/list_item_subtitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/trust_circle_desc"
+        android:layout_toEndOf="@+id/ListImageView"
+        android:text="IBM India Pvt Ltd,Hyderabad"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ListImageView"
+        android:fontFamily="@string/font_family"
+        android:layout_marginLeft="@dimen/list_image_width" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/trust_circle_status"
+        android:layout_toEndOf="@+id/trust_circle_desc"
+        android:text="Open"
+        android:fontFamily="@string/font_family"
+        android:layout_below="@+id/trust_circle_desc"
+        android:layout_toRightOf="@+id/trust_circle_desc"
+        android:layout_marginLeft="82dp" />
+
+</RelativeLayout>
